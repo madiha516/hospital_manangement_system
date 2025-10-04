@@ -9,7 +9,7 @@ def add_patient():
     age = input("Enter patient age: ")
     disease = input("Enter disease: ")
     patients.append({"Name": name, "Age": age, "Disease": disease})
-    print("✅ Patient added successfully!\n")
+    print(" Patient added successfully!\n")
 
 def view_patients():
     if not patients:
@@ -24,7 +24,7 @@ def add_doctor():
     name = input("Enter doctor name: ")
     specialization = input("Enter specialization: ")
     doctors.append({"Name": name, "Specialization": specialization})
-    print("✅ Doctor added successfully!\n")
+    print(" Doctor added successfully!\n")
 
 def view_doctors():
     if not doctors:
@@ -37,12 +37,12 @@ def view_doctors():
 
 def book_appointment():
     if not patients or not doctors:
-        print("⚠️ Need at least 1 patient and 1 doctor to book appointment.\n")
+        print(" Need at least 1 patient and 1 doctor to book appointment.\n")
         return
     patient_name = input("Enter patient name: ")
     doctor_name = input("Enter doctor name: ")
     appointments.append({"Patient": patient_name, "Doctor": doctor_name})
-    print("✅ Appointment booked successfully!\n")
+    print(" Appointment booked successfully!\n")
 
 def view_appointments():
     if not appointments:
@@ -54,7 +54,7 @@ def view_appointments():
         print()
 
 while True:
-    print("\n🏥 Hospital Management Menu 🏥")
+    print("\n Hospital Management Menu ")
     print("1. Add Patient")
     print("2. View Patients")
     print("3. Add Doctor")
@@ -81,4 +81,5 @@ while True:
         print("Exiting... Thank you!")
         break
     else:
+
         print("Invalid choice! Try again.\n")
